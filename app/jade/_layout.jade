@@ -1,0 +1,41 @@
+doctype html
+html(lang='ru', class="no-js")
+
+	head
+		meta(charset='utf-8')
+
+		title 
+			block title
+		meta(name='description', content='')
+
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+		meta(property='og:image', content='img/logo.png')
+		
+		link(rel='shortcut icon', href='img/favicon.ico', type='image/x-icon')
+		link(rel='apple-touch-icon', href='img/apple-touch-icon.png')
+		link(rel='apple-touch-icon', sizes='72x72', href='img/apple-touch-icon-72x72.png')
+		link(rel='apple-touch-icon', sizes='114x114', href='img/apple-touch-icon-114x114.png')
+		
+		link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css')
+		link(rel='stylesheet', href='css/bootstrap.grid.css')
+		link(rel='stylesheet', href='css/fonts.min.css')
+		link(rel='stylesheet', href='css/main.min.css')
+
+	body
+		include _header
+
+		block content
+
+		include _footer
+
+	// Поддержка старых браузеров
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+	script(src="js/commom.js")
